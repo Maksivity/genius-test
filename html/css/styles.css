@@ -5,7 +5,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    src: url('../fonts/poppins-v21-latin-300.woff2') format('woff2');
+    src: url('../fonts/poppins-v21-latin-300.woff2') format('woff2'),
+    url('../fonts/poppins-v21-latin-300.woff') format('woff');
     
 }
 
@@ -16,7 +17,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2');
+    src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2'),
+    url('../fonts/poppins-v21-latin-regular.woff') format('woff');
     
 }
 
@@ -27,7 +29,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2');
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2'),
+    url('../fonts/poppins-v21-latin-600.woff') format('woff');
     
 }
 
@@ -38,12 +41,13 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
-    src: url('../fonts/poppins-v21-latin-900.woff2') format('woff2');
+    src: url('../fonts/poppins-v21-latin-900.woff2') format('woff2'),
+    url('../fonts/poppins-v21-latin-900.woff') format('woff');
    
 }
 
 
-
+а
 :root {
     --color-primary-dark: #31261A;
     --color-primary-light: #faf4ea;; 
@@ -124,9 +128,7 @@ font-weight: 300;
     color: var(--color-brand-dark);
 }
 /* Traditional section */
-.traditions-text {
-    
-}
+
 
 .traditions-text .brand {
     color: var(--color-brand-light);
