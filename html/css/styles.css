@@ -41,8 +41,10 @@
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
-  --color-brand-light: #819b57;
+  --color-brand-normal: #819b57;
+  --color-brand-light: #cfcfbc;
   --color-brand-dark: #465929;
+  --color-secondary-dark: #a28268;
 }
 /* Base */
 * {
@@ -69,6 +71,7 @@ ul {
 }
 
 body {
+  background-color: var(--color-primary-light);
   color: var(--color-primary-dark);
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -96,8 +99,8 @@ address {
 .button {
   padding: 16px 32px;
   color: #faf4ea;
-  background-color: var(--color-brand-light);
-  border: 2px solid var(--color-brand-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
@@ -114,13 +117,15 @@ address {
   line-height: 1.5;
 }
 .link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 /* Header */
+.header {
+  background-color: gray;
+}
 .header-container {
   display: flex;
   align-items: center;
-  background-color: gray;
   gap: 40px;
 }
 .header-nav {
@@ -153,12 +158,12 @@ address {
 }
 
 .hero-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 /* Advantage section */
 .advantages-section {
   padding: 16px 0px;
-  background-color: var(--color-brand-light);
+  background-color: var(--color-brand-normal);
 }
 .advantages-list {
   display: flex;
@@ -175,6 +180,10 @@ address {
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
 }
 
 .section-title .accent {
@@ -202,22 +211,35 @@ address {
 }
 
 .traditions-text .brand {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 .traditions-text .uppercase {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   text-transform: uppercase;
 }
 /* Chefs section */
 .chefs-title {
-  margin-bottom: 80px;
+  max-width: 520px;
+  margin: 0 auto 80px;
 }
 
+.chefs-title::after,
+.chefs-title::before {
+  content: "";
+  width: 352px;
+  border: 2px solid #cfcfbc;
+  display: block;
+}
 .chef-title {
   margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600px;
+}
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
 }
 /* Format section */
 .formats-list {
@@ -256,6 +278,26 @@ address {
 .contact-title {
   margin-bottom: 16px;
 }
+/* Carousel */
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  fill: var(--color-primary-dark);
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  padding: 0;
+  cursor: pointer;
+}
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+
 /* Footer */
 .address-link {
   color: var(--color-primary-light);
@@ -266,6 +308,12 @@ address {
 }
 .address-link:hover {
   color: var(--color-primary-light);
+}
+.adress-icon {
+  fill: var(--color-primary-light);
+}
+.adress-icon:hover {
+  fill: var(--color-brand-normal);
 }
 
 .address-copyright {
