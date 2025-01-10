@@ -66,7 +66,7 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
 }
-.hidden {
+.visually-hidden {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -120,13 +120,18 @@ address {
   color: #faf4ea;
   text-decoration: none;
   line-height: 1.5;
+  transition: color 0.1s;
 }
 .link:hover {
   color: var(--color-brand-normal);
 }
 /* Header */
 .header {
-  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
 }
 .header-container {
   display: flex;
@@ -150,7 +155,13 @@ address {
 .hero-section {
   padding: 272px 0;
 
-  background-image: url("/genius-test/html/images/hero-section-background.jpeg");
+  background-image: linear-gradient(
+      126.97deg,
+      rgba(18, 18, 17, 0.78) 2.45%,
+      rgba(18, 18, 17, 0.6) 59.159%,
+      rgba(18, 18, 17, 0) 91.215%
+    ),
+    url("/genius-test/html/images/hero-section-background.jpeg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -222,6 +233,10 @@ address {
 .traditions-text .uppercase {
   color: var(--color-brand-normal);
   text-transform: uppercase;
+}
+.traditional-image {
+  border-top-right-radius: 400px;
+  border-top-left-radius: 400px;
 }
 /* Chefs section */
 
@@ -298,6 +313,10 @@ address {
   border: 1px solid lightgrey; /*  remove */
   border-radius: 16px;
   padding: 24px;
+  transition: transform 0.1s;
+}
+.format-card:hover {
+  transform: scale(1.05);
 }
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
@@ -345,12 +364,16 @@ address {
   border: 1px solid var(--color-primary-dark);
   padding: 0;
   cursor: pointer;
+  transition: background-color 0.1s, transform;
 }
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
+  transform: scale(1.05);
 }
-
+.carousel-button.next {
+  transform: rotate(180deg);
+}
 /* Footer */
 .footer {
   position: relative;
@@ -437,6 +460,8 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 20px;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -446,14 +471,65 @@ address {
 
 .modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  padding: 128px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  overflow-y: auto;
 }
 
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+/* Form */
+.form-field {
+  margin-bottom: 32px;
+  position: relative;
+}
+.form-label {
+  position: absolute;
+  left: 42px;
+  top: 16px;
+}
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary-dark);
+  background-color: transparent;
+}
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+.form-terms {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
