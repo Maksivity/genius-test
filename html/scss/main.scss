@@ -1,0 +1,92 @@
+@import "./utils/fonts";
+@import "./utils/variables";
+
+@import "./base";
+
+@import "./utils/utils";
+
+@import "./components/buttons";
+@import "./components/links";
+@import "./components/header";
+@import "./components/hero-section";
+
+@import "./utils/mixins";
+@import "./components/advantages-sec";
+@import "./components/tradional-sec";
+@import "./components/chefs-sec";
+@import "./components/formats-sec";
+@import "./components/carousel-button";
+@import "./layouts/footer";
+@import "./components/adress";
+@import "./components/modal";
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: 48px 0;
+}
+/* Advantage section */
+
+/* Traditional section */
+
+/* Chefs section */
+
+/* Format section */
+
+/* Carousel */
+
+/* Footer */
+
+/* Modal */
+
+/* Form */
+.form-field {
+  margin-bottom: 32px;
+  position: relative;
+}
+.form-label {
+  position: absolute;
+  left: 42px;
+  top: 16px;
+}
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary-dark);
+  background-color: transparent;
+}
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+.form-terms {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
+}

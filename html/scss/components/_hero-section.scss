@@ -1,0 +1,25 @@
+/* Hero */
+.hero-section {
+  padding: 272px 0;
+
+  background-image: linear-gradient(
+      126.97deg,
+      rgba(18, 18, 17, 0.78) 2.45%,
+      rgba(18, 18, 17, 0.6) 59.159%,
+      rgba(18, 18, 17, 0) 91.215%
+    ),
+    url("/genius-test/html/images/hero-section-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.hero-title {
+  color: #faf4ea;
+  text-align: center;
+  font-size: 128px;
+  font-weight: 900;
+}
+
+.hero-title .accent {
+  color: var(--color-brand-normal);
+}

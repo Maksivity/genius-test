@@ -6,7 +6,7 @@
     <title>Сучасна пекарня</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="html/css/styles.css" />
+    <link rel="stylesheet" href="html/css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -24,8 +24,8 @@
                 >
               </li>
               <li><a class="link" href="#chefs">Шеф-кухарі</a></li>
-              <li><a class="link" href="#">Формати</a></li>
-              <li><a class="link" href="#">Контакти</a></li>
+              <li><a class="link" href="#formats-section">Формати</a></li>
+              <li><a class="link" href="#contacts-section">Контакти</a></li>
             </ul>
           </nav>
           <button class="button modal-btn-open">Замовити дзвінок</button>
@@ -143,6 +143,11 @@
             <ul class="formats-list">
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./html/images/walrus-bg.jpg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-title" lang="uk">Walrus</h3>
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
@@ -157,6 +162,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./html/images/Horseshoe-bg.jpeg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-title" lang="uk">Horseshoe</h3>
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
@@ -168,6 +178,11 @@
               </li>
               <li class="formats-item">
                 <article class="format-card">
+                  <img
+                    class="format-image"
+                    src="./html/images/Handlebar-bg.jpeg"
+                    alt="Walrus format"
+                  />
                   <h3 class="format-title" lang="uk">Handlebar</h3>
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
@@ -266,10 +281,14 @@
 
             <!-- logo-->
             <ul class="footer-menu">
-              <li><a class="link" href="#">Наші традиції</a></li>
-              <li><a class="link" href="#">Шеф-кухарі</a></li>
-              <li><a class="link" href="#">Формати</a></li>
-              <li><a class="link" href="#">Контакти</a></li>
+              <li>
+                <a class="link" href="#traditional-sections"
+                  ><span>Наші традиції</span></a
+                >
+              </li>
+              <li><a class="link" href="#chefs">Шеф-кухарі</a></li>
+              <li><a class="link" href="#formats-section">Формати</a></li>
+              <li><a class="link" href="#contacts-section">Контакти</a></li>
             </ul>
           </nav>
 
@@ -324,13 +343,16 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <input
               class="form-input"
               type="text"
               id="username"
               placeholder="Ім'я"
+              minlength="2"
+              maxlength="20"
+              required
             />
 
             <label class="form-label visually-hidden" for="username"
@@ -343,6 +365,7 @@
               type="tel"
               id="user-telephone"
               placeholder="Телефон"
+              required
             />
             <label class="form-label visually-hidden" for="user-telephone"
               >Телефон</label
@@ -354,6 +377,7 @@
               type="email"
               id="eser-email"
               placeholder="Електронна пошта"
+              required
             />
             <label class="form-label visually-hidden" for="user-email"
               >Електронна пошта</label

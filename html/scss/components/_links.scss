@@ -1,0 +1,10 @@
+/* Link */
+.link {
+  color: #faf4ea;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.1s;
+}
+.link:hover {
+  color: var(--color-brand-normal);
+}
