@@ -1,0 +1,15 @@
+.format-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  height: 444px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.208%,
+    rgba(49, 38, 26, 0.71) 72.917%,
+    rgb(49, 38, 26) 100%
+  );
+  border-radius: 16px;
+  padding: 24px;
+}
